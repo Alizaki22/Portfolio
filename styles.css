@@ -1,0 +1,159 @@
+/* Reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: #0f172a;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1e293b;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #38bdf8;
+}
+
+/* Sections */
+#welcome-section {
+  height: 100vh;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* offset for fixed navbar */
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#welcome-section p {
+  font-size: 1.5rem;
+  color: #94a3b8;
+}
+
+/* Projects Section */
+#projects {
+  padding: 4rem 2rem;
+  background-color: #1e293b;
+  text-align: center;
+}
+
+.project-section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f1f5f9;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-tile {
+  background: #334155;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #f8fafc;
+  transition: transform 0.3s;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
+}
+
+.project-tile img {
+  width: 100%;
+  height: auto;
+}
+
+.project-tile p {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+  background: #0f172a;
+  text-align: center;
+}
+
+.contact-section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section-header p {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-details {
+  background: #1e40af;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-details:hover {
+  background: #2563eb;
+}
+
+/* Media Query (Requirement #11) */
+@media (max-width: 600px) {
+  #welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .project-section-title {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
